@@ -26,28 +26,29 @@ Many changes have happened to the Display Application, along with suitable code 
  
 ## Updating your stock R16 or R17 - MUST READ
 ### Background
-Out of the factory, the stock R16 and R17 displays use the SD card on the back of the display, to hold the application the display runs. When the display is powered up, the display will load the files from the card, and store them in RAM (memory) on the display each time it start up, and then execute the program from RAM. The displays Flash memory is largely unused. This has worked OK up till now, however BCN3D has used up all the RAM so very few updates can happen. 
-So what changed in this Enhanced Version is the display has been changed to store and run the application from Flash, keeping RAM for variables and normal runtime operations. This then means there is a ton of headroom for updates. The display has 6 banks of 32KB of Flash, and 32KB total of RAM, plus SD card storage for graphics, fonts etc.
+Out of the factory, the stock R16 and R17 displays use the SD card on the back of the display, to hold the application the display runs. When the display is powered up, the display will load the files from the card, and store them in RAM (memory) on the display each time it starts up, and then execute the program from RAM. The displays Flash memory is largely unused. This has worked OK up till now, however BCN3D has used up all the RAM so very few updates can happen. 
+So what changed in this Enhanced Version is the displays Boot Application has been changed to store and run the application from Flash, keeping RAM for variables and normal runtime operations. This then means there is a ton of headroom for updates. The display has 6 banks of 32KB of Flash, and 32KB total of RAM, plus SD card storage for graphics, fonts etc.
 To enable this to work, you CANNOT simply update the display with this new program without first upgrading the displays 'Boot Application'. This is the app which sits in the first bank of Flash, which reads the SD card, puts the Application into RAM, and runs it. So we need to upgrade this small application, to instead load the SD card into the 2nd Flash Bank (if the SD card application has changed), and run it from there, freeing up a bunch of RAM. 
 It is very simple to do. 
-Yes, you can go back to run the stock firmware and display application if you want. The stock application will still however be run from Flash rather than RAM from this point on, but its good in alot of ways. You can run all the stock code again if you want. 
+Yes, you can go back to run the stock firmware and display application if you want. The stock application will still however be run from Flash rather than RAM from this point on, but its good in a lot of ways. You can run all the stock code again if you want. 
  
 ### How to do the upgrade
 #### Update the Boot Application on the display.
 In order to upgrade the displays 'Boot Application', we need to get at the SD card in the display. This is fiddly on both R16 and R17 but especailly the R17. BCN3D never upgraded the little trap door inside the machine behind the display, when they made the R17, but the display is different and so is the location of the SD card on the display, and the type of SD card connector used.
-The R16 is a push/push connector, push it eject, and push to insert, its accessible from the top of the trop door, so is very manageable to upgrade this program.
-The R17 is a latch type connector, slide it towards the top and it has a hinge at the top too, so the latch lifts up from the bottom, and the card comes out from just sitting against the terminals. Reverse to put it back in. With the angle the display is on, yes you are very likely to drop the card into the guts of the printer. But, there is a way to do it.
+The R16 is a push/push connector, push it eject, and push to insert, its accessible from the top of the trap door, so it is very manageable to upgrade the program in the BCN3d designed fashion.
+The R17 is a latch type connector, slide it towards the top and it has a hinge at the top too, so the latch swings up from the bottom, and the card comes out from just sitting against the terminals. Reverse to put it back in. With the angle the display is on, yes you are very likely to drop the card into the guts of the printer. But, there is a way to do it.
 If you are nible, by all means use the little trap door.
 If you have 'man hands' or struggle to do up your own shoelaces, then you might want to go straight to this next option.
 
 ##### Trap door method
 1) Unscrew the trap door inside the printer, immediately behind the display, in front of the right spool.
 2) Peek in the hole
-3) Push the SD card to unlock it, and lift it out of the displays SD card connector. 
-4) Done :) Reverse the process to reinsert, push to lock.
+3) Make sure the printer is fully turned off, main Power and USB is unplugged.
+4) Push the SD card to unlock it, and lift it out of the displays SD card connector. Take note of the orientation of the card as you remove it. So you put it back in the same way.
+5) Done :) Reverse the process to reinsert, push to lock.
 
 ##### Removal of false floor method
-1) Inside the machine, there is the false floor covering up the main circuit board controller. Remove that panel with the 4 screws. On the right side, under the right spool, is another panel. Remove the spool and spool holder (yeah you likely want to unload the filament), and then undo the screws holding in that part of the floor. There are 4 screws. This should then lift out, and expose right up to the back of the display. This should give you more access to get to the SD card on the back of the display.
+1) Inside the machine, there is the false floor covering up the main printer controller. Remove that panel with the 4 screws. On the right side, under the right spool, is another panel. Remove the spool and spool holder (yeah you likely want to unload the filament), and then undo the screws holding in that part of the floor. There are 4 screws. This should then lift out, and expose right up to the back of the display. This should give you more access to get to the SD card on the back of the display.
 2) Turn OFF the printer, and make sure the USB is also not connected to anything.
 3) Carefully slide the SD card latch up, then it should swing out with the hinge at the top, allowing the card to come out. To put it back, you place the card against the socket, lower the door on top of it, and slide it down towards the bottom of the machine to lock it in place. Not rocket science but be gentle.
 4) Pat yourself on the back :)
