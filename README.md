@@ -7,9 +7,9 @@ https://github.com/BCN3D/BCN3DSigma-Firmware
 Many changes have happened to the Display Application, along with suitable code in the Marlin to support these display changes. There are also versions for both R16 and R17 display models.
 
 ## Change Log
-* Changed the colour scheme from the default Blue, to Orange, to make obvious the change to this Fork.
-* Converted most String objects to User Images, which temperatures and various information is displayed. These use to flash each time the number was updated. This no longer happens, it is now smooth.
-* User Images (updated above) now update once a second, rather than once every 5 seconds, providing users with a faster responding experience.
+* Changed the colour scheme from the default Blue, to Orange, to make an obvious difference between this Enhanced version, and the stock BCN3d version.
+* Converted most String objects to User Images. These were used to display the temperatures and various information in the menus and printing screens. These used to flash each time the number changed. This no longer happens, it is now smooth.
+* Temperatures etc now update once a second, rather than once every 5 seconds, providing users with a faster responding experience.
 * Added Z height display output to the main printing status window. This will be enhanced later.
 * Added the ability to control the LED strips along the top sides of the printer. Default was a bluey/white, which was hard to take photos in, and also offered no choice to people who wanted to customise their printing experience.  
   - In theory there are 4096 colours available for the LED light strips. 
@@ -94,3 +94,9 @@ You can do either, and you can mix it up, do what ever floats your boat.
 
 More instructions to come...
 WORK IN PROGRESS
+
+### Wish List
+* Ability to change flow rate mid print, useful for dialing in new filament etc
+* Display layer number during the print, to upgrade the Z height already added
+* Ability to change Nozel size for calibrations, and material type
+* more to add...
