@@ -30,7 +30,7 @@ Out of the factory, the stock R16 and R17 displays use the SD card on the back o
 So what changed in this Enhanced Version is the display has been changed to store and run the application from Flash, keeping RAM for variables and normal runtime operations. This then means there is a ton of headroom for updates. The display has 6 banks of 32KB of Flash, and 32KB total of RAM, plus SD card storage for graphics, fonts etc.
 To enable this to work, you CANNOT simply update the display with this new program without first upgrading the displays 'Boot Application'. This is the app which sits in the first bank of Flash, which reads the SD card, puts the Application into RAM, and runs it. So we need to upgrade this small application, to instead load the SD card into the 2nd Flash Bank (if the SD card application has changed), and run it from there, freeing up a bunch of RAM. 
 It is very simple to do. 
-Yes, you can go back to run the stock firmware and display application if you want. The stock application will still however be run from Flash rather than RAM from this point on, but its good in alot of ways. You can run all the stock code again if you want. How do I know this? Because I work for 4D Systems, and designed these display modules.
+Yes, you can go back to run the stock firmware and display application if you want. The stock application will still however be run from Flash rather than RAM from this point on, but its good in alot of ways. You can run all the stock code again if you want. 
  
 ### How to do the upgrade
 #### Update the Boot Application on the display.
